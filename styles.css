@@ -98,7 +98,7 @@ header {
     display: none;
 }
 
-/* Event */
+/* Event  start*/
 section {
     width: 80%;
     margin: 80px auto;
@@ -127,6 +127,10 @@ section {
     margin-top: 50px;
 }
 
+.events .row .col img {
+    width: 93%;
+}
+
 h4 {
     font-size: 3vmin;
     color: #484872;
@@ -137,8 +141,13 @@ p {
     color: #7c7c7c;
     padding: 0px 40px;
 }
+.events .row .col .ctn {
+    margin-top: 20px;
+}
 
-/* explore */
+/* Event  end*/
+
+/* explore start*/
 .explore {
     width: 100%;
     height: 100vh;
@@ -176,9 +185,12 @@ p {
     margin-top: 40px;
 }
 
+/* explore end*/
+
 
 .content-col {
     width: 40%;
+    padding-right: 20px;
 }
 
 .image-col {
@@ -186,15 +198,17 @@ p {
 }
 
 .tours .image-gallery {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    /* flex-wrap: wrap; */
     width: 100%;
     align-items: center;
 }
 
 .image-gallery img {
-    max-width: 300px;
-    margin: 10px;
+    width: 100%;
+    height: 100%;
 }
 
 .content-col h1 {
@@ -215,6 +229,19 @@ p {
 }
 
 
+.footer {
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 80px;
+    margin: 0;
+    background: #484872;
+    text-align: center;
+}
+
+.footer p {
+    color: whitesmoke;
+    margin: 20px auto;
+}
 
 /* Mobile device */
 @media only screen and (max-width: 850px) {
@@ -249,4 +276,69 @@ p {
         margin: 30px auto;
     
     }
+
+    /* Event section */
+    .row {
+        flex-direction: column;
+    }
+    .row .col {
+        margin: 20px auto;
+    }
+    .col img {
+        max-width: 90%;
+    }
+
+    /* explore*/
+    .explore-content {
+        width: 100%;
+    }
+
+    /* tours */
+    .content-col {
+        padding-right: 0;
+    }
+    .tours .col {
+        width: 100%;
+    }
+
+    .tours .image-gallery {
+        grid-template-columns: auto;
+        /* justify-content: center; */
+        align-items: center;
+    }
+    .image-gallery img {
+        max-width: 100%;
+    }
+
+    /* footer */
+    .footer {
+        padding: 10px;
+    }
+}
+@media only screen and (max-width: 430px) {
+    .menu-btn {
+        width: 27px;
+    }
+    
+
+}
+
+
+
+/* animaions */
+img {
+    transition: transform 0.3s ease;
+}
+img:hover {
+    transform: scale(1.1);
+}
+.ctn:hover {
+    background-color: whitesmoke;
+    color: #fc036b;
+    box-shadow: 2px 2px 5px #00000056;
+}
+
+li:hover {
+    color: #fc036b;
+    cursor: pointer;
 }
